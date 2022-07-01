@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.logo-visual {
+  width: 35%;
+  height: 100%;
+}
+.logo-visual img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  width: 65%;
+  height: 100%;
+  background-color: #232946;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text,
+.confirmation-container {
+  width: 100%;
+  height: 35%;
+}
+
+.form-container {
+  width: 100%;
+  height: 30%;
+  background-color: #353d63;
+}/*# sourceMappingURL=styles.css.map */

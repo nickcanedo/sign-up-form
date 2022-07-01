@@ -1,0 +1,46 @@
+$background: #232946;
+$form-background: #353d63;
+$logo-text: #fffffe;
+$text: #b8c1ec;
+$btn: #eebbc3;
+$btn-text: #232946;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.logo-visual {
+    width: 35%;
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+main {
+    width: 65%;
+    height: 100%;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text,
+.confirmation-container {
+    width: 100%;
+    height: 35%;
+}
+
+.form-container {
+    width: 100%;
+    height: 30%;
+    background-color: $form-background;
+}
