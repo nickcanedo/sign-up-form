@@ -9,15 +9,62 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <div class="mobile-header">ODIN</div>
     <div class="logo-visual">
-        <img src="./img/background.jpg" alt="CSS code snippet background">
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="Odin Logo" class="odin-logo">
+            <p class="logo-text">ODIN</p>
+        </div>
+        <img src="./img/background.jpg" alt="Code background image">
     </div>
     <main>
         <div class="info-text">
+            <div class="text-1">
+                This is a not real online service! You know you need something like this 
+                in your life to help you realize your biggest dreams. Sign up <em>now</em> to get started.
+            </div>
+            <div class="text-2">
+                You <em>know</em> you want to.
+            </div>
         </div>
         <div class="form-container">
+            <p class="form-text">Let's do this!<span class="required">Required fields are marked by <abbr title="Required field" aria-label="Required field">*</abbr></span></p>
+            <form action="" metho="post" id="form">
+                <div class="row1">
+                    <p class="first-name">
+                        <label for="first-name">FIRST NAME <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                    </p>
+                    <p class="last-name">
+                        <label for="last-name">LAST NAME <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                    </p>
+                </div>
+                <div class="row2">
+                    <p class="email">
+                        <label for="email">EMAIL <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </p>
+                    <p class="phone-number">
+                        <label for="phone-number">PHONE NUMBER <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder="Phone Number" required>
+                    </p>
+                </div>
+                <div class="row3">
+                    <p class="password">
+                        <label for="password">PASSWORD <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="password" name="password" id="password" minlength="8" placeholder="Password" required>
+                    </p>
+                    <p class="confirm-password">
+                        <label for="confirm-password">CONFIRM PASSWORD <abbr title="Required field" aria-label="Required field">*</abbr></label>
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" minlength="8" required>
+                    </p>
+                </div>
+            </form>
         </div>
         <div class="confirmation-container">
+            <button type="submit" form="form">Create Account</button>
+            <p class="log-in">Already have an account? <a href="./index.html" class="log-in">Log in</a></p>
         </div>
     </main>
 </body>

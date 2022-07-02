@@ -1,13 +1,24 @@
-$background: #232946;
-$form-background: #353d63;
+$background: rgb(244, 243, 243);
+$form-background: rgb(252, 252, 252);
 $logo-text: #fffffe;
-$text: #b8c1ec;
-$btn: #eebbc3;
-$btn-text: #232946;
+$text: black;
+$btn: #596D48;
+$btn-text: white;
+
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+.mobile-header {
+    display: none;
 }
 
 body {
@@ -16,7 +27,7 @@ body {
 }
 
 .logo-visual {
-    width: 35%;
+    width: 40vw;
     height: 100%;
     img {
         width: 100%;
@@ -26,8 +37,9 @@ body {
 }
 
 main {
-    width: 65%;
+    width: 60vw;
     height: 100%;
+    min-height: 100%;
     background-color: $background;
     display: flex;
     flex-direction: column;
@@ -37,10 +49,200 @@ main {
 .confirmation-container {
     width: 100%;
     height: 35%;
+    min-height: 18rem;
+    min-width: 50rem;
 }
 
 .form-container {
     width: 100%;
+    min-width: 50rem;
     height: 30%;
+    min-height: 15rem;
     background-color: $form-background;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.text-1,
+.text-2 {
+    color: $text;
+    font-size: 22px;
+    padding-left: 3rem;
+    width: 70%;
+}
+
+.text-1 {
+    margin-top: 6rem;
+}
+
+.text-2 {
+    margin-top: 2rem;
+}
+
+.logo-container {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 40vw;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: calc(35vh - 60px - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    color: $logo-text;
+    font-size: 90px;
+    font-family: 'Stick No Bills', sans-serif;
+    margin: 0.5rem 1rem;
+}
+
+.log-in,
+form,
+.form-text {
+    margin: 0 3rem;
+}
+
+button {
+    width: 25%;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: $btn;
+    color: $btn-text;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    margin: 2rem 3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #475739
+}
+
+.form-text {
+    padding: 1rem 0;
+    font-size: 22px;
+    margin-bottom: 0.2rem;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 0.1rem;
+}
+
+input {
+    width: 70%;
+    height: 1.7rem;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 3px;
+    margin-bottom: 0.7rem;
+    padding: 0 0.5rem;
+}
+
+input:focus {
+    border: 1px solid red;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form div {
+    display: flex;
+}
+
+a.log-in {
+    text-decoration: none;
+    color: $btn;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+a.log-in:hover {
+    color: #475739;
+}
+
+p.credit {
+    color: white;
+    background-color: transparent;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+p.credit a {
+    text-decoration: underline;
+    color: white;
+}
+
+abbr {
+    color: red;
+}
+
+span.required {
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid {
+    border: 1px solid green;
+}
+
+img.odin-logo {
+    width: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-visual {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    div.text-1 {
+        margin-top: 4rem;
+    }
+
+    .text-1,
+    .text-2 {
+        overflow: auto;
+    }
+
+    .mobile-header {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Stick No Bills', sans-serif;
+        background-color: $background;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form div {
+        display: block;
+    }
+
+    div.form-container {
+        height: 25rem;
+        min-height: 25rem;
+    }
 }
